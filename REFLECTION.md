@@ -29,13 +29,13 @@ What I changed or fixed myself: I wrote the insertLast and insertAfter logic, ha
 GitHub Issue / PR / Commit I contributed: PR #3 on the MahesaAja branch (commit "Update Add insertLast operation").
 ---
 
-Name:
-My main contribution:
-What I learned about next and prev:
-The hardest part:
-What AI helped me with:
-What I changed or fixed myself:
-GitHub Issue / PR / Commit I contributed:
+Name: Fathin Arib Nurhumam
+My main contribution: I worked on the deleteNode() function and destructor.
+What I learned about next and prev: I learned that deleting a node also requires updating the next and prev pointers so the list does not lose its connections.
+The hardest part: The hardest part was understanding which pointers needed to be changed when deleting a node, especially for the first and last node.
+What AI helped me with: AI helped me understand the pointer changes needed in the delete function and how the destructor works.
+What I changed or fixed myself: I tested the delete function and fixed the pointer connections so the list still worked correctly after deleting a node.
+GitHub Issue / PR / Commit I contributed: PR #4 on the Fathin branch. I contributed the deleteNode() and destructor code.
 
 ---
 
