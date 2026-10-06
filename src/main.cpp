@@ -14,7 +14,18 @@ struct Node {
     }
 };
 
-void displayForward() {
+
+class DoublyLinkedList {
+private:
+    Node* head;
+    Node* tail;
+
+public:
+    DoublyLinkedList() {
+        head = nullptr;
+        tail = nullptr;
+    }
+    void displayForward() {
     Node* current = head;
 
     cout << "\nForward: ";
@@ -47,24 +58,6 @@ void displayBackward() {
 
     cout << endl;
 }
-
-class DoublyLinkedList {
-private:
-    Node* head;
-    Node* tail;
-};
-
-class DoublyLinkedList {
-private:
-    Node* head;
-    Node* tail;
-
-public:
-    DoublyLinkedList() {
-        head = nullptr;
-        tail = nullptr;
-    }
-};
 
 void insertLast(string data) {
     Node* newNode = new Node(data);
@@ -166,3 +159,5 @@ void checkIntegrity() {
         delete temp;
     }
 }
+};
+
