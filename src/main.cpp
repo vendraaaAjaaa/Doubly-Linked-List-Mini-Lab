@@ -31,3 +31,44 @@ public:
         tail = nullptr;
     }
 };
+
+void insertLast(string data) {
+    Node* newNode = new Node(data);
+
+    if (head == nullptr) {
+        head = newNode;
+        tail = newNode;
+        return;
+    }
+
+    tail->next = newNode;
+    newNode->prev = tail;
+    tail = newNode;
+}
+
+void insertAfter(string target, string newData) {
+    Node* current = head;
+
+    while (current != nullptr &&
+           current->data != target) {
+        current = current->next;
+    }
+
+    if (current == nullptr) {
+        cout << "Node tidak ditemukan.\n";
+        return;
+    }
+
+    Node* newNode = new Node(newData);
+
+    newNode->next = current->next;
+    newNode->prev = current;
+
+    if (current->next != nullptr) {
+        current->next->prev = newNode;
+    } else {
+        tail = newNode;
+    }
+
+    current->next = newNode;
+}
