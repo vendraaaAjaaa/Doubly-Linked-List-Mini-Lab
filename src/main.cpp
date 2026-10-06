@@ -13,3 +13,9 @@ struct Node {
         next = nullptr;
     }
 };
+
+class DoublyLinkedList {
+private:
+    Node* head;
+    Node* tail;
+};
