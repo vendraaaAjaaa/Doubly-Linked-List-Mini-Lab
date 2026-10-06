@@ -107,6 +107,34 @@ void insertAfter(string target, string newData) {
     current->next = newNode;
 }
 
+void deleteNode(string target) {
+    Node* current = head;
+
+    while (current != nullptr &&
+           current->data != target) {
+        current = current->next;
+    }
+
+    if (current == nullptr) {
+        cout << "Node tidak ditemukan.\n";
+        return;
+    }
+
+    if (current->prev != nullptr) {
+        current->prev->next = current->next;
+    } else {
+        head = current->next;
+    }
+
+    if (current->next != nullptr) {
+        current->next->prev = current->prev;
+    } else {
+        tail = current->prev;
+    }
+
+    delete current;
+}
+
 void checkIntegrity() {
     cout << "\nChecking pointer connections...\n";
 
@@ -118,7 +146,6 @@ void checkIntegrity() {
     Node* current = head;
 
     while (current->next != nullptr) {
-
         if (current->next->prev != current) {
             cout << "Pointer error!\n";
             return;
@@ -128,4 +155,14 @@ void checkIntegrity() {
     }
 
     cout << "Semua pointer benar.\n";
+}
+
+~DoublyLinkedList() {
+    Node* current = head;
+
+    while (current != nullptr) {
+        Node* temp = current;
+        current = current->next;
+        delete temp;
+    }
 }
