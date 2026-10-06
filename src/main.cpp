@@ -135,6 +135,28 @@ void deleteNode(string target) {
     delete current;
 }
 
+void checkIntegrity() {
+    cout << "\nChecking pointer connections...\n";
+
+    if (head == nullptr) {
+        cout << "List kosong.\n";
+        return;
+    }
+
+    Node* current = head;
+
+    while (current->next != nullptr) {
+        if (current->next->prev != current) {
+            cout << "Pointer error!\n";
+            return;
+        }
+
+        current = current->next;
+    }
+
+    cout << "Semua pointer benar.\n";
+}
+
 ~DoublyLinkedList() {
     Node* current = head;
 
