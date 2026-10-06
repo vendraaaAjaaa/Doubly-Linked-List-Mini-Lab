@@ -14,6 +14,40 @@ struct Node {
     }
 };
 
+void displayForward() {
+    Node* current = head;
+
+    cout << "\nForward: ";
+
+    while (current != nullptr) {
+        cout << current->data;
+
+        if (current->next != nullptr)
+            cout << " <-> ";
+
+        current = current->next;
+    }
+
+    cout << endl;
+}
+
+void displayBackward() {
+    Node* current = tail;
+
+    cout << "\nBackward: ";
+
+    while (current != nullptr) {
+        cout << current->data;
+
+        if (current->prev != nullptr)
+            cout << " <-> ";
+
+        current = current->prev;
+    }
+
+    cout << endl;
+}
+
 class DoublyLinkedList {
 private:
     Node* head;
