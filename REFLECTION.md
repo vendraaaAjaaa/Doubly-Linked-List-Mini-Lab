@@ -39,10 +39,18 @@ GitHub Issue / PR / Commit I contributed:
 
 ---
 
-Name:
+Name: Muhammad Fariz Muhtadi
 My main contribution:
+Implementing the core Doubly Linked List functions (insert, delete, and traversal) in C++ and setting up the main experiment structure for the team repository.
 What I learned about next and prev:
+I learned that 'next' points to the succeeding node for forward traversal, while 'prev' points to the preceding node for backward traversal. When inserting or deleting a node, both pointers of the adjacent nodes must be updated properly to avoid breaking the list connection.
 The hardest part:
+Ensuring pointer integrity during deletion and middle insertion, especially handling edge cases where 'prev' or 'next' might be nullptr or accessing memory that hasn't been re-linked properly.
 What AI helped me with:
+AI helped explain the step-by-step logic for pointer updates during node deletion and assisted in debugging compilation/linker errors in VS Code.
 What I changed or fixed myself:
+Fixed the pointer update logic for backward traversal in Task 9, verified the output for forward and backward traversal, and tested edge cases for middle insertion and deletion.
 GitHub Issue / PR / Commit I contributed:
+- Issue: #1 Add core Doubly Linked List implementation and bug fixes
+- PR: #2 Merge Doubly Linked List implementation into main
+- Commit: "Add forward and backward traversal", "Fix delete-node pointer update"
